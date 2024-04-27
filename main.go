@@ -9,6 +9,7 @@ import (
 	"os"
 
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 	_ "github.com/lib/pq"
 )
 
@@ -37,6 +38,7 @@ func main() {
 	}
 
 	e := echo.New()
+	e.Use(middleware.Logger())
 	e.GET("/", func(c echo.Context) error {
 		var text string
 		err = db.QueryRow(`SELECT text FROM dajare ORDER BY RANDOM() LIMIT 1`).Scan(&text)
