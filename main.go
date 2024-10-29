@@ -39,6 +39,7 @@ func main() {
 
 	e := echo.New()
 	e.Use(middleware.Logger())
+	e.Use(middleware.CORS())
 	e.GET("/", func(c echo.Context) error {
 		var text string
 		err = db.QueryRow(`SELECT text FROM dajare ORDER BY RANDOM() LIMIT 1`).Scan(&text)
