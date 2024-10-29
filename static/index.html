@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Dajare API</title>
   <script src="https://unpkg.com/htmx.org"></script>
   <script src="https://unpkg.com/htmx.org/dist/ext/client-side-templates.js"></script>
   <script src="https://unpkg.com/mustache@latest"></script>
   <link rel="stylesheet" type="text/css" href="style.css" media="all" />
 </head>
 <body>
-<p id="dajare"></p>
 <div hx-ext="client-side-templates">
 <button
   hx-get="https://dajare-api.compile-error.net/api"
@@ -19,7 +18,7 @@
   hx-swap="innerHTML"
   mustache-template="dajare-template"
   hx-indicator=".loader"
-  hx-disabled-elt="this">だじゃれ</button>
+  hx-disabled-elt="this">だじゃれ</button> <span id="dajare"></span>
 <div class="loader">
   読み込み中...
 </div>
