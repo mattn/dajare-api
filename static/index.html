@@ -12,7 +12,14 @@
 <body>
 <p id="dajare"></p>
 <div hx-ext="client-side-templates">
-<button hx-get="https://dajare-api.compile-error.net/api" hx-trigger="click delay:500" hx-target="#dajare" hx-swap="innerHTML" mustache-template="dajare-template" hx-indicator=".loader">だじゃれ</button>
+<button
+  hx-get="https://dajare-api.compile-error.net/api"
+  hx-trigger="click delay:500"
+  hx-target="#dajare"
+  hx-swap="innerHTML"
+  mustache-template="dajare-template"
+  hx-indicator=".loader"
+  hx-disabled-elt="this">だじゃれ</button>
 <div class="loader">
   読み込み中...
 </div>
