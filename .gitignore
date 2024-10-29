@@ -1,3 +1,6 @@
 dajare-api
+dajare-api.exe
 k8s
 *.sh
+*.bat
+*.yaml
